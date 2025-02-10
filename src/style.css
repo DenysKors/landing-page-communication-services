@@ -1,7 +1,39 @@
 @import '../node_modules/modern-normalize/modern-normalize.css';
 
+@font-face {
+  font-family: 'Merriweather';
+  src: local('Merriweather Bold'), local('Merriweather-Bold'),
+    url('./assets/fonts/Merriweather-Bold.ttf') format('ttf');
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: local('Merriweather Regular'), local('Merriweather-Regular'),
+    url('./assets/fonts/Merriweather-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: local('Raleway Regular'), local('Raleway-Regular'),
+    url('./assets/fonts/Raleway-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-display: swap;
+}
+
+* {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --bg-color: #fdfdfd;
+  --text-color: #333;
+  --main-color: #3ebfdf;
+  --white-color: #fdfdfd;
 }
 
 /* Reset */
