@@ -24,16 +24,27 @@
   font-display: swap;
 }
 
-* {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 :root {
-  --bg-color: #fdfdfd;
-  --text-color: #333;
-  --main-color: #3ebfdf;
-  --white-color: #fdfdfd;
+  --font-hero: 'Merriweather-Bold', sans-serif;
+  --font-heading: 'Merriweather-Regular', sans-serif;
+  --font-text: 'Raleway-Regular', sans-serif;
+
+  --color-bg: #f3f4f6;
+  --color-body: #ffffff;
+  --color-heading: #1d2329;
+  --color-text: #454b52;
+  --color-link-hover-bg: #bababa36;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background: var(--color-body);
+  color: var(--color-text);
 }
 
 /* Reset */
@@ -68,9 +79,4 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-}
-
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
 }
