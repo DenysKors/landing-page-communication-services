@@ -1,26 +1,20 @@
 @import '../node_modules/modern-normalize/modern-normalize.css';
 
 @font-face {
-  font-family: 'Merriweather';
-  src: local('Merriweather Bold'), local('Merriweather-Bold'),
-    url('./assets/fonts/Merriweather-Bold.ttf') format('ttf');
-  font-weight: 800;
+  font-family: 'Arsenal';
+  src: local('Arsenal Bold'), local('Arsenal-Bold'),
+    url('./assets/fonts/Arsenal-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Merriweather';
-  src: local('Merriweather Regular'), local('Merriweather-Regular'),
-    url('./assets/fonts/Merriweather-Regular.ttf') format('ttf');
+  font-family: 'Poppins';
+  src: local('Poppins Regular'), local('Poppins-Regular'),
+    url('./assets/fonts/Poppins-Regular.ttf') format('truetype');
   font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Raleway';
-  src: local('Raleway Regular'), local('Raleway-Regular'),
-    url('./assets/fonts/Raleway-Regular.ttf') format('ttf');
-  font-weight: 400;
+  font-style: normal;
   font-display: swap;
 }
 
@@ -30,11 +24,10 @@ html {
 }
 
 :root {
-  --font-hero: 'Merriweather-Bold', sans-serif;
-  --font-heading: 'Merriweather-Regular', sans-serif;
-  --font-text: 'Raleway-Regular', sans-serif;
+  --font-heading: 'Arsenal', sans-serif;
+  --font-text: 'Poppins', sans-serif;
 
-  --color-bg: #f3f4f6;
+  --color-bg-section: #f3f4f6;
   --color-body: #ffffff;
   --color-heading: #1d2329;
   --color-text: #454b52;
@@ -42,7 +35,7 @@ html {
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Arsenal', 'Poppins', sans-serif;
   background: var(--color-body);
   color: var(--color-text);
 }
