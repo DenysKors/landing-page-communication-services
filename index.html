@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="preload"
-      href="./assets/Arsenal-Bold.ttf"
+      href="./src/assets/fonts/Arsenal-Bold.ttf"
       as="font"
       crossorigin="anonymous"
     />
     <link
       rel="preload"
-      href="./assets/Poppins-Regular.ttf"
+      href="./src/assets/fonts/Poppins-Regular.ttf"
       as="font"
       crossorigin="anonymous"
     />
@@ -31,12 +31,29 @@
         <a class="header-link" href="">Lorem</a>
         <a class="header-link" href="">Lorem</a>
       </nav>
-      <button
-        id="theme-switch"
-        type="button"
-        title="перемикач теми"
-        aria-label="перемикач теми"
-      ></button>
+      <div class="header-btn-container">
+        <button
+          id="theme-switch"
+          type="button"
+          title="перемикач теми"
+          aria-label="перемикач теми"
+        >
+          <svg class="header-icon-theme">
+            <use href="./src/assets/images/icons.svg#icon-light-theme"></use>
+          </svg>
+        </button>
+        <button
+          class="header-btn-menu"
+          id="menu"
+          type="button"
+          title="мобільне меню"
+          aria-label="мобільне меню"
+        >
+          <svg class="header-icon-menu">
+            <use href="./src/assets/images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+      </div>
     </header>
     <h1>файний лендінг в розробці</h1>
 

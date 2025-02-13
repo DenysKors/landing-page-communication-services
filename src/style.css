@@ -33,6 +33,15 @@ html {
   --color-link-hover-bg: #bababa36;
 }
 
+.dark-theme {
+  /* Change section color */
+  --color-bg-section: #f3f4f6;
+  --color-body: #0b061f;
+  --color-heading: #ffffff;
+  --color-text: #fdfdfd;
+  --color-link-hover-bg: #8a8a8a5e;
+}
+
 body {
   font-family: 'Arsenal', 'Poppins', sans-serif;
   background: var(--color-body);
@@ -63,7 +72,12 @@ a {
 }
 
 button {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
   font-family: inherit;
+  background-color: inherit;
+  border: none;
   cursor: pointer;
 }
 
@@ -81,6 +95,7 @@ img {
   position: fixed;
   top: 1rem;
   display: flex;
+  justify-content: space-between;
   border-radius: 0.375rem;
   background-color: var(--color-body);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
@@ -91,9 +106,8 @@ img {
 @media only screen and (min-width: 768px) {
   .header {
     left: 50%;
-    padding: 1rem;
+    padding: 0.875rem;
     max-width: 64rem;
-    justify-content: space-around;
     transform: translateX(-50%);
   }
 }
@@ -125,10 +139,13 @@ img {
   width: 100%;
   display: flex;
   gap: 1rem;
-  /* background-color: inherit; */
   place-content: center;
-  /* overflow: hidden;
-  transition: width 0.3s ease, height 0.3s ease; */
+}
+
+@media only screen and (max-width: 1023px) {
+  .header-nav {
+    display: none;
+  }
 }
 
 .header-link {
@@ -169,4 +186,40 @@ img {
 .header-link:focus::after {
   transform: scale(100%);
   opacity: 1;
+}
+
+.header-btn-container {
+  display: flex;
+}
+
+.header-icon-theme {
+  width: 18px;
+  height: 18px;
+  fill: var(--color-heading);
+}
+
+@media only screen and (min-width: 768px) {
+  .header-icon-theme {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.header-icon-menu {
+  width: 24px;
+  height: 24px;
+  fill: var(--color-heading);
+}
+
+@media only screen and (min-width: 768px) {
+  .header-icon-menu {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .header-btn-menu {
+    display: none;
+  }
 }
