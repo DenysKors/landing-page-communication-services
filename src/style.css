@@ -26,20 +26,25 @@ html {
   --font-heading: 'Arsenal', sans-serif;
   --font-text: 'Poppins', sans-serif;
 
-  --color-bg-section: #f3f4f6;
   --color-body: #ffffff;
+  --color-bg-header: #f3f4f6;
+  /* --color-bg-section:; */
   --color-heading: #1d2329;
   --color-text: #454b52;
-  --color-link-hover-bg: #bababa36;
+  --color-link-hover-bg: #dbdcdd;
+  --shadow-header: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .dark-theme {
-  /* Change section color */
-  --color-bg-section: #f3f4f6;
-  --color-body: #0b061f;
+  --color-body: #0a0f20;
+  --color-bg-header: #313131;
+  /* --color-bg-section:; */
   --color-heading: #ffffff;
-  --color-text: #fdfdfd;
-  --color-link-hover-bg: #8a8a8a5e;
+  --color-text: #e6e6e6;
+  --color-link-hover-bg: #616262;
+  --shadow-header: 0 4px 6px -1px rgba(55, 65, 81),
+    0 2px 4px -1px rgba(55, 65, 81);
 }
 
 body {
@@ -74,7 +79,7 @@ a {
 button {
   display: flex;
   align-items: center;
-  padding: 8px 12px;
+  padding: 6px 10px;
   font-family: inherit;
   background-color: inherit;
   border: none;
@@ -97,10 +102,8 @@ img {
   display: flex;
   justify-content: space-between;
   border-radius: 0.375rem;
-  background-color: var(--color-body);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  z-index: 20;
+  background-color: var(--color-bg-header);
+  box-shadow: var(--shadow-header);
 }
 
 @media only screen and (min-width: 768px) {
@@ -190,6 +193,7 @@ img {
 
 .header-btn-container {
   display: flex;
+  gap: 1rem;
 }
 
 .header-icon-theme {
