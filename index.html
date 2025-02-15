@@ -33,13 +33,17 @@
       </nav>
       <div class="header-btn-container">
         <button
+          class="heaser-btn-theme"
           id="theme-switch"
           type="button"
           title="перемикач теми"
           aria-label="перемикач теми"
         >
-          <svg class="header-icon-theme">
+          <svg id="icon-light" class="header-icon-theme">
             <use href="./src/assets/images/icons.svg#icon-light-theme"></use>
+          </svg>
+          <svg id="icon-dark" class="header-icon-theme hide">
+            <use href="./src/assets/images/icons.svg#icon-dark-theme"></use>
           </svg>
         </button>
         <button
