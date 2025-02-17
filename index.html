@@ -25,7 +25,7 @@
         <span>Logo</span>
         <a class="logo-link" href="tel:+3800000000">+3800000000</a>
       </div>
-      <nav class="header-nav">
+      <nav class="header-nav" data-modal-open="false">
         <a class="header-link" href="">Lorem</a>
         <a class="header-link" href="">Lorem</a>
         <a class="header-link" href="">Lorem</a>
@@ -48,17 +48,21 @@
         </button>
         <button
           class="header-btn-menu"
-          id="menu"
+          id="mobile-menu"
           type="button"
           title="мобільне меню"
           aria-label="мобільне меню"
         >
-          <svg class="header-icon-menu">
+          <svg id="icon-menu" class="header-icon-menu">
             <use href="./src/assets/images/icons.svg#icon-menu"></use>
+          </svg>
+          <svg id="icon-close" class="header-icon-menu hide">
+            <use href="./src/assets/images/icons.svg#icon-close"></use>
           </svg>
         </button>
       </div>
     </header>
+    <div id="mobile-backdrop" class="header-mob-backdrop hide"></div>
     <h1>файний лендінг в розробці</h1>
 
     <script type="module" src="/src/main.js"></script>

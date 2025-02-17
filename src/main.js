@@ -3,7 +3,11 @@ import './style.css';
 const themeBtnRef = document.getElementById('theme-switch');
 const svgLightIconRef = document.getElementById('icon-light');
 const svgDarkIconRef = document.getElementById('icon-dark');
-// const mobMemuBtnRef = document.getElementById('#menu');
+const mobMemuBtnRef = document.getElementById('mobile-menu');
+const mobMenuRef = document.querySelector('[data-modal-open]');
+const mobMenuBackdrop = document.getElementById('mobile-backdrop');
+const svgMenuIconRef = document.getElementById('icon-menu');
+const svgCloseIconRef = document.getElementById('icon-close');
 
 const toggleTheme = () => {
   document.body.classList.toggle('dark-theme');
@@ -17,4 +21,26 @@ const toggleTheme = () => {
   }
 };
 
+const toggleMenuIcon = () => {
+  if (mobMenuRef.dataset.modalOpen === 'true') {
+    svgMenuIconRef.classList.add('hide');
+    svgCloseIconRef.classList.remove('hide');
+  } else {
+    svgMenuIconRef.classList.remove('hide');
+    svgCloseIconRef.classList.add('hide');
+  }
+};
+
+const mobMenuControl = () => {
+  if (mobMenuRef.dataset.modalOpen === 'true') {
+    mobMenuRef.dataset.modalOpen = 'false';
+    mobMenuBackdrop.classList.add('hide');
+  } else {
+    mobMenuRef.dataset.modalOpen = 'true';
+    mobMenuBackdrop.classList.remove('hide');
+  }
+  toggleMenuIcon();
+};
+
 themeBtnRef.addEventListener('click', toggleTheme);
+mobMemuBtnRef.addEventListener('click', mobMenuControl);
