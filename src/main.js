@@ -1,5 +1,6 @@
 import './style.css';
 
+const headerRef = document.querySelector('.header');
 const themeBtnRef = document.getElementById('theme-switch');
 const svgLightIconRef = document.getElementById('icon-light');
 const svgDarkIconRef = document.getElementById('icon-dark');
@@ -44,3 +45,6 @@ const mobMenuControl = () => {
 
 themeBtnRef.addEventListener('click', toggleTheme);
 mobMemuBtnRef.addEventListener('click', mobMenuControl);
+window.onscroll;
+
+headerRef.classList.toggle('sticky', window.scrollY > 100);
