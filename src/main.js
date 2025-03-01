@@ -46,8 +46,10 @@ const mobMenuControl = () => {
 themeBtnRef.addEventListener('click', toggleTheme);
 mobMemuBtnRef.addEventListener('click', mobMenuControl);
 
-// headerRef.classList.toggle('sticky', window.scrollY > 100);
+window.onscroll = () => {
+  headerRef.classList.toggle('levitate', window.scrollY > 100);
+};
 
-// const elDistanceToTop = window.scrollY + headerRef.getBoundingClientRect().top;
+// const distanceToTop = window.scrollY + headerRef.getBoundingClientRect().top;
 
-// console.log(elDistanceToTop);
+// console.log(distanceToTop);
