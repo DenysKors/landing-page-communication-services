@@ -90,14 +90,41 @@ img {
   height: auto;
 }
 
+/* COMMON */
+
 .hide {
   display: none;
+}
+
+.section {
+  padding: 32px 24px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+@media only screen and (min-width: 768px) {
+  .section {
+    padding: 32px 32px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .section {
+    padding: 64px 0px;
+  }
 }
 
 /* BREACKPOINTS */
 
 /* min-width: 768px - tablet */
 /* min-width: 1024px - desktop */
+
+/* OUTLINED ELEMENTS FOR TEST PURPOSES 
+*,
+::before,
+::after {
+  border: 1px, solid, red;
+} */
 
 /* HEADER */
 
@@ -339,9 +366,9 @@ header.levitate {
 
 /* SECTION-HERO */
 
-.section-hero {
+.hero {
   margin: 0 auto;
-  width: 100vw;
+  width: 100%;
   height: calc(100vw / 1.78);
   max-width: 1600px;
   max-height: 900px;
@@ -357,24 +384,25 @@ header.levitate {
 }
 
 @media only screen and (min-width: 1600px) {
-  .section-hero {
+  .hero {
     border-radius: 1.6rem;
   }
 }
 
-.section-hero-heading {
+.hero-heading {
   width: 240px;
   position: absolute;
   top: 10%;
   left: 5%;
   font-size: 1.25rem;
+  font-weight: 700;
   line-height: calc(1.75 / 1.25);
   color: #fff;
   text-transform: uppercase;
 }
 
 @media only screen and (min-width: 768px) {
-  .section-hero-heading {
+  .hero-heading {
     top: 20%;
     width: 340px;
     font-size: 1.5rem;
@@ -383,34 +411,40 @@ header.levitate {
 }
 
 @media only screen and (min-width: 1024px) {
-  .section-hero-heading {
+  .hero-heading {
     width: 500px;
     font-size: 2.25rem;
     line-height: calc(2.5 / 2.25);
   }
 }
 
-/* SECTION-SOLUTIONS */
-
-.section-solutions {
-  padding: 32px 24px;
-  margin: 0 auto;
-  max-width: 1200px;
+.hero-subHeading {
+  font-family: var(--font-text);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: calc(1 / 0.75);
+  color: currentColor;
+  text-transform: uppercase;
 }
 
 @media only screen and (min-width: 768px) {
-  .section-solutions {
-    padding: 32px 32px;
+  .hero-subHeading {
+    font-size: 1rem;
+    line-height: calc(1.5 / 1);
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .section-solutions {
-    padding: 64px 0px;
+  .hero-subHeading {
+    font-size: 1.25rem;
+    line-height: calc(1.75 / 1.25);
   }
 }
 
-.section-solutions-heading {
+/* SECTION-SOLUTIONS */
+
+.solutions-heading {
+  padding-bottom: 32px;
   font-size: 1.25rem;
   line-height: calc(1.75 / 1.25);
   color: var(--color-heading);
@@ -418,15 +452,81 @@ header.levitate {
 }
 
 @media only screen and (min-width: 768px) {
-  .section-solutions-heading {
+  .solutions-heading {
+    padding-bottom: 36px;
     font-size: 1.5rem;
     line-height: calc(2 / 1.5);
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .section-solutions-heading {
+  .solutions-heading {
+    padding-bottom: 42px;
     font-size: 2.25rem;
     line-height: calc(2.5 / 2.25);
+  }
+}
+
+.solutions-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+  .solutions-list {
+    gap: 40px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .solutions-list {
+    gap: 50px;
+  }
+}
+
+.solutions-list-item {
+  width: 250px;
+}
+
+@media only screen and (min-width: 768px) {
+  .solutions-list-item {
+    width: 280px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .solutions-list-item {
+    width: 320px;
+  }
+}
+
+.item-img {
+  border-radius: 1rem;
+}
+
+.item-heading {
+  padding-top: 10px;
+  font-family: var(--font-text);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: calc(1.75 / 1.125);
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .item-heading {
+    padding-top: 20px;
+    font-size: 1.25rem;
+    line-height: calc(1.75 / 1.25);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .item-heading {
+    font-size: 1.5rem;
+    line-height: calc(2 / 1.5);
   }
 }
