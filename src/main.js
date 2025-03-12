@@ -2,8 +2,8 @@ import './style.css';
 
 const headerRef = document.querySelector('.header');
 const themeBtnRef = document.getElementById('theme-switch');
-const svgLightIconRef = document.getElementById('icon-light');
-const svgDarkIconRef = document.getElementById('icon-dark');
+const svgSunIconRef = document.getElementById('icon-sun');
+const svgMoonIconRef = document.getElementById('icon-moon');
 const mobMemuBtnRef = document.getElementById('mobile-menu');
 const mobMenuRef = document.querySelector('[data-modal-open]');
 const mobMenuBackdrop = document.getElementById('mobile-backdrop');
@@ -14,11 +14,13 @@ const toggleTheme = () => {
   document.body.classList.toggle('dark-theme');
 
   if (document.body.classList.contains('dark-theme')) {
-    svgLightIconRef.classList.add('hide');
-    svgDarkIconRef.classList.remove('hide');
+    svgMoonIconRef.classList.add('sun-theme');
+    svgSunIconRef.classList.add('moon-theme');
+    themeBtnRef.classList.add('back-moon');
   } else {
-    svgLightIconRef.classList.remove('hide');
-    svgDarkIconRef.classList.add('hide');
+    svgMoonIconRef.classList.remove('sun-theme');
+    svgSunIconRef.classList.remove('moon-theme');
+    themeBtnRef.classList.remove('back-moon');
   }
 };
 
