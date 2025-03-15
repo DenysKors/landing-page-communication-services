@@ -1,6 +1,10 @@
 import './style.css';
 
-const headerRef = document.querySelector('.header');
+import { gsap } from 'gsap';
+
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+// const headerRef = document.querySelector('.header');
 const themeBtnRef = document.getElementById('theme-switch');
 const svgSunIconRef = document.getElementById('icon-sun');
 const svgMoonIconRef = document.getElementById('icon-moon');
@@ -48,10 +52,52 @@ const mobMenuControl = () => {
 themeBtnRef.addEventListener('click', toggleTheme);
 mobMemuBtnRef.addEventListener('click', mobMenuControl);
 
-window.onscroll = () => {
-  headerRef.classList.toggle('levitate', window.scrollY > 100);
-};
+/* HEADER LEVITATE WITHOUT GSAP */
 
-// const distanceToTop = window.scrollY + headerRef.getBoundingClientRect().top;
+// window.onscroll = () => {
+//   headerRef.classList.toggle('levitate', window.scrollY > 100);
+// };
 
-// console.log(distanceToTop);
+/* SECTION ANIMATIONS */
+
+gsap.registerPlugin(ScrollTrigger);
+
+ScrollTrigger.create({
+  start: 'top -80',
+  end: 99999,
+  toggleClass: {
+    className: 'levitate',
+    targets: '.header',
+  },
+});
+
+const reveal = document.querySelectorAll('.reveal');
+
+reveal.forEach(el => {
+  let headings = el.querySelectorAll('h2');
+  let images = el.querySelectorAll('img');
+
+  let tl = gsap
+    .timeline()
+    .from(headings, {
+      y: 50,
+      stagger: 0.2,
+      opacity: 0,
+      duration: 0.8,
+      ease: 'power3.out',
+    })
+    .from(images, {
+      scale: 0.8,
+      opacity: 0,
+      duration: 0.6,
+      ease: 'power2.out',
+    });
+
+  ScrollTrigger.create({
+    trigger: el,
+    start: '10% 80%',
+    end: '20% 90%',
+    // markers: true,
+    animation: tl,
+  });
+});

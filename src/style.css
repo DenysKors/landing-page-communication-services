@@ -261,31 +261,31 @@ header.levitate {
   }
 }
 
-.header-link {
+.header-nav-link {
   position: relative;
   padding: 8px 15px;
   font-size: 1.25rem;
   line-height: calc(1.75 / 1.25);
 }
 
-.header-link:hover,
-.header-link:focus {
+.header-nav-link:hover,
+.header-nav-link:focus {
   color: var(--color-heading);
 }
 
 @media only screen and (min-width: 768px) {
-  .header-link {
+  .header-nav-link {
     font-size: 1.5rem;
     line-height: calc(2 / 1.5);
   }
 }
 
 @media only screen and (max-width: 1023px) {
-  .header-link:not(:last-child) {
+  .header-nav-link:not(:last-child) {
     border-bottom: 1px solid var(--color-backdrop);
   }
 }
-.header-link::after {
+.header-nav-link::after {
   content: '';
   position: absolute;
   top: 0;
@@ -300,8 +300,8 @@ header.levitate {
   transition: all 300ms;
 }
 
-.header-link:hover::after,
-.header-link:focus::after {
+.header-nav-link:hover::after,
+.header-nav-link:focus::after {
   transform: scale(100%);
   opacity: 1;
 }
