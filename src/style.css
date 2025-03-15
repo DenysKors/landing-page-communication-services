@@ -635,6 +635,7 @@ header.levitate {
   font-size: 1.125rem;
   font-weight: 400;
   line-height: calc(1.75 / 1.125);
+  color: #454b52;
   letter-spacing: 0.05em;
   text-align: center;
 }
@@ -717,6 +718,7 @@ header.levitate {
   font-size: 1.1rem;
   font-weight: 400;
   line-height: calc(1.5 / 1);
+  color: #454b52;
   letter-spacing: 0.05em;
   text-align: center;
 }
