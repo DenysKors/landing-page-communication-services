@@ -105,13 +105,13 @@ img {
 
 @media only screen and (min-width: 768px) {
   .section {
-    padding: 32px 32px;
+    padding: 32px 30px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .section {
-    padding: 64px 0px;
+    padding: 64px 38px;
   }
 }
 
@@ -125,13 +125,13 @@ img {
 
 @media only screen and (min-width: 768px) {
   .section-wide {
-    padding: 32px 32px;
+    padding: 32px 30px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .section-wide {
-    padding: 64px 0px;
+    padding: 64px 38px;
   }
 }
 
@@ -146,12 +146,14 @@ img {
 /* min-width: 768px - tablet */
 /* min-width: 1024px - desktop */
 
-/* OUTLINED ELEMENTS FOR TEST PURPOSES 
-*,
+/* OUTLINED ELEMENTS FOR TEST PURPOSES */
+
+/* *,
 ::before,
 ::after {
   border: 1px, solid, red;
-} */
+}
+*/
 
 /* HEADER */
 
@@ -484,6 +486,16 @@ header.levitate {
 @media only screen and (min-width: 1024px) {
   .hero-heading {
     top: 25%;
+    left: 3%;
+    width: 600px;
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .hero-heading {
+    top: 25%;
     left: 12%;
     width: 600px;
     font-size: 3rem;
@@ -517,7 +529,7 @@ header.levitate {
 /* SECTION-SOLUTIONS */
 
 .solutions-heading {
-  padding-bottom: 32px;
+  margin-bottom: 32px;
   font-size: 1.5rem;
   line-height: calc(2 / 1.5);
   color: var(--color-heading);
@@ -526,7 +538,7 @@ header.levitate {
 
 @media only screen and (min-width: 768px) {
   .solutions-heading {
-    padding-bottom: 36px;
+    margin-bottom: 36px;
     font-size: 1.875rem;
     line-height: calc(2.25 / 1.875);
   }
@@ -534,7 +546,7 @@ header.levitate {
 
 @media only screen and (min-width: 1024px) {
   .solutions-heading {
-    padding-bottom: 42px;
+    margin-bottom: 42px;
     font-size: 3rem;
     line-height: 1;
   }
@@ -580,7 +592,7 @@ header.levitate {
 }
 
 .solutions-item-heading {
-  padding-top: 10px;
+  margin-top: 10px;
   font-family: var(--font-text);
   font-size: 1.125rem;
   font-weight: 400;
@@ -591,7 +603,7 @@ header.levitate {
 
 @media only screen and (min-width: 768px) {
   .solutions-item-heading {
-    padding-top: 20px;
+    margin-top: 20px;
     font-size: 1.25rem;
     line-height: calc(1.75 / 1.25);
   }
@@ -607,7 +619,7 @@ header.levitate {
 /*SECTION-ADVANTAGES */
 
 .advantages-heading {
-  padding-bottom: 16px;
+  margin-bottom: 16px;
   font-size: 1.5rem;
   line-height: calc(2 / 1.5);
   color: #1d2329;
@@ -623,14 +635,14 @@ header.levitate {
 
 @media only screen and (min-width: 1024px) {
   .advantages-heading {
-    padding-bottom: 32px;
+    margin-bottom: 32px;
     font-size: 3rem;
     line-height: 1;
   }
 }
 
 .advantages-text {
-  padding-bottom: 42px;
+  margin-bottom: 42px;
   font-family: var(--font-text);
   font-size: 1.125rem;
   font-weight: 400;
@@ -642,7 +654,7 @@ header.levitate {
 
 @media only screen and (min-width: 768px) {
   .advantages-text {
-    padding-bottom: 50px;
+    margin-bottom: 50px;
     font-size: 1.25rem;
     line-height: calc(1.75 / 1.25);
   }
@@ -650,7 +662,7 @@ header.levitate {
 
 @media only screen and (min-width: 1024px) {
   .advantages-text {
-    padding-bottom: 68px;
+    margin-bottom: 68px;
     font-size: 1.5rem;
     line-height: calc(2 / 1.5);
   }
@@ -694,7 +706,7 @@ header.levitate {
 }
 
 .advantages-item-heading {
-  padding-top: 10px;
+  margin-top: 10px;
   font-family: var(--font-text);
   font-size: 1.1rem;
   font-weight: 400;
@@ -706,7 +718,7 @@ header.levitate {
 
 @media only screen and (min-width: 768px) {
   .advantages-item-heading {
-    padding-top: 20px;
+    margin-top: 20px;
     font-size: 1.125rem;
     line-height: calc(1.75 / 1.125);
   }
@@ -722,7 +734,7 @@ header.levitate {
 /* OPPORTUNITIES-SECTION */
 
 .opportunities-heading {
-  padding-bottom: 32px;
+  margin-bottom: 32px;
   font-size: 1.5rem;
   line-height: calc(2 / 1.5);
   color: var(--color-heading);
@@ -731,7 +743,7 @@ header.levitate {
 
 @media only screen and (min-width: 768px) {
   .opportunities-heading {
-    padding-bottom: 36px;
+    margin-bottom: 36px;
     font-size: 1.875rem;
     line-height: calc(2.25 / 1.875);
   }
@@ -739,7 +751,7 @@ header.levitate {
 
 @media only screen and (min-width: 1024px) {
   .opportunities-heading {
-    padding-bottom: 42px;
+    margin-bottom: 42px;
     font-size: 3rem;
     line-height: 1;
   }
@@ -753,16 +765,28 @@ header.levitate {
   gap: 10px;
 }
 
+.opportunities-article:not(:last-child) {
+  margin-bottom: 32px;
+}
+
 @media only screen and (min-width: 768px) {
   .opportunities-article {
     flex-direction: row;
     gap: 20px;
+  }
+
+  .opportunities-article:not(:last-child) {
+    margin-bottom: 36px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .opportunities-article {
     gap: 30px;
+  }
+
+  .opportunities-article:not(:last-child) {
+    margin-bottom: 42px;
   }
 }
 
@@ -798,6 +822,8 @@ header.levitate {
 }
 
 .opportunities-article-heading {
+  overflow-wrap: break-word;
+  hyphens: manual;
   font-size: 1.5rem;
   line-height: calc(2 / 1.5);
   color: var(--color-heading);
