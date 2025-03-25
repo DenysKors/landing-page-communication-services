@@ -75,23 +75,22 @@ const reveal = document.querySelectorAll('.reveal');
 
 reveal.forEach(el => {
   let headings = el.querySelectorAll('h2');
-  let images = el.querySelectorAll('img');
+  // let images = el.querySelectorAll('img');
 
-  let tl = gsap
-    .timeline()
-    .from(headings, {
-      y: 50,
-      stagger: 0.2,
-      opacity: 0,
-      duration: 0.8,
-      ease: 'power3.out',
-    })
-    .from(images, {
-      scale: 0.8,
-      opacity: 0,
-      duration: 0.6,
-      ease: 'power2.out',
-    });
+  let tl = gsap.timeline().from(headings, {
+    y: 50,
+    stagger: 0.2,
+    opacity: 0,
+    duration: 0.8,
+    ease: 'power3.out',
+  });
+
+  // .from(images, {
+  //   scale: 0.8,
+  //   opacity: 0,
+  //   duration: 0.6,
+  //   ease: 'power2.out',
+  // });
 
   ScrollTrigger.create({
     trigger: el,
