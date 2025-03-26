@@ -804,7 +804,7 @@ header.levitate {
   }
 } */
 
-#opportunities > article {
+#opportunities > article:not(:first-child) {
   margin-top: 32px;
 }
 
@@ -813,7 +813,7 @@ header.levitate {
 }
 
 @media only screen and (min-width: 768px) {
-  #opportunities > article {
+  #opportunities > article:not(:first-child) {
     margin-top: 36px;
   }
 
@@ -823,7 +823,7 @@ header.levitate {
 }
 
 @media only screen and (min-width: 1024px) {
-  #opportunities > article {
+  #opportunities > article:not(:first-child) {
     margin-top: 42px;
   }
 

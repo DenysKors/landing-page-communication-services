@@ -83,13 +83,10 @@ ScrollTrigger.create({
   },
 });
 
-const reveal = document.querySelectorAll('.reveal');
+const reveal = document.querySelectorAll('h2');
 
 reveal.forEach(el => {
-  let headings = el.querySelectorAll('h2');
-  // let images = el.querySelectorAll('img');
-
-  let tl = gsap.timeline().from(headings, {
+  let tl = gsap.timeline().from(el, {
     y: 50,
     stagger: 0.2,
     opacity: 0,
@@ -97,16 +94,28 @@ reveal.forEach(el => {
     ease: 'power3.out',
   });
 
-  // .from(images, {
-  //   scale: 0.8,
-  //   opacity: 0,
-  //   duration: 0.6,
-  //   ease: 'power2.out',
-  // });
+  ScrollTrigger.create({
+    trigger: el,
+    start: '3% 85%',
+    end: '20% 90%',
+    // markers: true,
+    animation: tl,
+  });
+});
+
+const images = document.querySelectorAll('img');
+
+images.forEach(el => {
+  let tl = gsap.timeline().from(el, {
+    scale: 0.8,
+    opacity: 0,
+    duration: 0.6,
+    ease: 'power2.out',
+  });
 
   ScrollTrigger.create({
     trigger: el,
-    start: '10% 80%',
+    start: '3% 85%',
     end: '20% 90%',
     // markers: true,
     animation: tl,
