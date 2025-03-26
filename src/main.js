@@ -8,7 +8,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 const themeBtnRef = document.getElementById('theme-switch');
 const svgSunIconRef = document.getElementById('icon-sun');
 const svgMoonIconRef = document.getElementById('icon-moon');
-const mobMemuBtnRef = document.getElementById('mobile-menu');
+const mobMenuBtnRef = document.getElementById('mobile-menu');
 const mobMenuRef = document.querySelector('[data-modal-open]');
 const mobMenuBackdrop = document.getElementById('mobile-backdrop');
 const svgMenuIconRef = document.getElementById('icon-menu');
@@ -49,8 +49,20 @@ const mobMenuControl = () => {
   toggleMenuIcon();
 };
 
+const mobNavControl = evt => {
+  if (mobMenuRef.dataset.modalOpen === 'false') {
+    return;
+  } else if (evt.target === evt.currentTarget) {
+    return;
+  }
+  mobMenuRef.dataset.modalOpen = 'false';
+  mobMenuBackdrop.classList.add('hide');
+  toggleMenuIcon();
+};
+
 themeBtnRef.addEventListener('click', toggleTheme);
-mobMemuBtnRef.addEventListener('click', mobMenuControl);
+mobMenuBtnRef.addEventListener('click', mobMenuControl);
+mobMenuRef.addEventListener('click', mobNavControl);
 
 /* HEADER LEVITATE WITHOUT GSAP */
 
