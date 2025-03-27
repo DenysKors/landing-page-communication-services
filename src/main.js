@@ -3,6 +3,7 @@ import './style.css';
 import { gsap } from 'gsap';
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { TextPlugin } from 'gsap/TextPlugin';
 
 // const headerRef = document.querySelector('.header');
 const themeBtnRef = document.getElementById('theme-switch');
@@ -73,6 +74,7 @@ mobMenuRef.addEventListener('click', mobNavControl);
 /* SECTION ANIMATIONS */
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(TextPlugin);
 
 ScrollTrigger.create({
   start: 'top -80',
@@ -121,3 +123,49 @@ images.forEach(el => {
     animation: tl,
   });
 });
+
+const section = document.querySelector('.section-animate');
+const text = document.querySelector('.questions-text');
+const bgColors = ['#e4f5fc', '#313131', '#dcdfe3'];
+const textColors = ['#1d2329', '#e6e6e6', '#454b52'];
+const texts = [
+  'Залишились питання? Телефонуйте!',
+  'Просте та швидке підключення',
+  'Наші спеціалісти завжди на зв&#x0313;язку',
+];
+const tl = gsap.timeline({
+  repeat: -1,
+});
+
+for (let i = 0; i < texts.length; i += 1) {
+  tl.to(section, { duration: 0.5, backgroundColor: bgColors[i] });
+  if (i) {
+    tl.fromTo(
+      text,
+      { text: texts[i - 1], opacity: 0, color: textColors[i - 1] },
+      { text: '', opacity: 1, ease: 'none' },
+      '<'
+    ).to(text, {
+      text: texts[i],
+      duration: 7,
+      opacity: 1,
+      color: textColors[i],
+    });
+  } else {
+    tl.fromTo(
+      text,
+      {
+        text: texts[texts.length - 1],
+        opacity: 0,
+        color: textColors[textColors.length - 1],
+      },
+      { text: '', opacity: 1 },
+      '<'
+    ).to(text, {
+      text: texts[i],
+      duration: 7,
+      opacity: 1,
+      color: textColors[i],
+    });
+  }
+}
