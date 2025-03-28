@@ -194,8 +194,15 @@ img {
 }
 
 header.levitate {
+  padding: 0rem 0.5rem;
   background-color: var(--color-bg-header);
   box-shadow: var(--shadow-header);
+}
+
+@media only screen and (min-width: 768px) {
+  header.levitate {
+    padding: 0rem 0.875rem;
+  }
 }
 
 .header-logo {
@@ -978,6 +985,32 @@ header.levitate {
     var(--color-heading) 50%,
     var(--color-link-hover-bg) 100%
   );
+}
+
+/* EQUIPMENT-SECTION */
+
+.equipment-heading {
+  margin-bottom: 32px;
+  font-size: 1.5rem;
+  line-height: calc(2 / 1.5);
+  color: var(--color-heading);
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .equipment-heading {
+    margin-bottom: 36px;
+    font-size: 1.875rem;
+    line-height: calc(2.25 / 1.875);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .equipment-heading {
+    margin-bottom: 42px;
+    font-size: 3rem;
+    line-height: 1;
+  }
 }
 
 /* QUESTIONS-SECTION */
