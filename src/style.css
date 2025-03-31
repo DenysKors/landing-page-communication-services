@@ -481,9 +481,10 @@ header.levitate {
   position: absolute;
   top: 8%;
   left: 3%;
+  font-family: var(--font-heading);
+  font-weight: 700;
   font-size: 1.5rem;
   line-height: calc(2 / 1.5);
-  font-weight: 700;
   color: #fff;
   text-transform: uppercase;
 }
@@ -513,15 +514,13 @@ header.levitate {
     top: 25%;
     left: 10%;
     width: 600px;
-    font-size: 3rem;
-    line-height: 1;
   }
 }
 
 .hero-subHeading {
   font-family: var(--font-text);
-  font-size: 0.875rem;
   font-weight: 400;
+  font-size: 0.875rem;
   line-height: calc(1 / 0.75);
   color: currentColor;
   text-transform: uppercase;
@@ -545,6 +544,8 @@ header.levitate {
 
 .solutions-heading {
   margin-bottom: 32px;
+  font-family: var(--font-heading);
+  font-weight: 700;
   font-size: 1.5rem;
   line-height: calc(2 / 1.5);
   color: var(--color-heading);
@@ -615,8 +616,8 @@ header.levitate {
 .solutions-item-heading {
   margin-top: 10px;
   font-family: var(--font-text);
-  font-size: 1.125rem;
   font-weight: 400;
+  font-size: 1.125rem;
   line-height: calc(1.75 / 1.125);
   letter-spacing: 0.05em;
   text-align: center;
@@ -641,6 +642,8 @@ header.levitate {
 
 .advantages-heading {
   margin-bottom: 16px;
+  font-family: var(--font-heading);
+  font-weight: 700;
   font-size: 1.5rem;
   line-height: calc(2 / 1.5);
   color: #1d2329;
@@ -665,8 +668,8 @@ header.levitate {
 .advantages-text {
   margin-bottom: 42px;
   font-family: var(--font-text);
-  font-size: 1.125rem;
   font-weight: 400;
+  font-size: 1.125rem;
   line-height: calc(1.75 / 1.125);
   color: #454b52;
   letter-spacing: 0.05em;
@@ -729,8 +732,8 @@ header.levitate {
 .advantages-item-heading {
   margin-top: 10px;
   font-family: var(--font-text);
-  font-size: 1.1rem;
   font-weight: 400;
+  font-size: 1.1rem;
   line-height: calc(1.5 / 1);
   color: #454b52;
   letter-spacing: 0.05em;
@@ -756,6 +759,8 @@ header.levitate {
 
 .opportunities-heading {
   margin-bottom: 32px;
+  font-family: var(--font-heading);
+  font-weight: 700;
   font-size: 1.5rem;
   line-height: calc(2 / 1.5);
   color: var(--color-heading);
@@ -777,39 +782,6 @@ header.levitate {
     line-height: 1;
   }
 }
-
-/* .opportunities-article {
-  width: 100%;
-  height: min-content;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.opportunities-article:not(:last-child) {
-  margin-bottom: 32px;
-}
-
-@media only screen and (min-width: 768px) {
-  .opportunities-article {
-    flex-direction: row;
-    gap: 20px;
-  }
-
-  .opportunities-article:not(:last-child) {
-    margin-bottom: 36px;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .opportunities-article {
-    gap: 30px;
-  }
-
-  .opportunities-article:not(:last-child) {
-    margin-bottom: 42px;
-  }
-} */
 
 #opportunities > article:not(:first-child) {
   margin-top: 32px;
@@ -933,6 +905,8 @@ header.levitate {
 }
 
 .opportunities-article-heading {
+  font-family: var(--font-heading);
+  font-weight: 700;
   font-size: 1.5rem;
   line-height: calc(2 / 1.5);
   color: var(--color-heading);
@@ -954,8 +928,8 @@ header.levitate {
 
 .opportunities-article-text {
   font-family: var(--font-text);
-  font-size: 1.125rem;
   font-weight: 400;
+  font-size: 1.125rem;
   line-height: calc(1.75 / 1.125);
   letter-spacing: 0.05em;
   text-align: left;
@@ -991,6 +965,8 @@ header.levitate {
 
 .equipment-heading {
   margin-bottom: 32px;
+  font-family: var(--font-heading);
+  font-weight: 700;
   font-size: 1.5rem;
   line-height: calc(2 / 1.5);
   color: var(--color-heading);
@@ -1013,11 +989,116 @@ header.levitate {
   }
 }
 
+/* ONLINE-SECTION */
+
+.section-wide-img {
+  margin: 0 auto;
+  width: 100%;
+  height: calc(100vw / 2.33);
+  max-width: 1600px;
+  max-height: 685px;
+  position: relative;
+  background-color: var(--color-backdrop);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(47, 48, 58, 0.3) 50%,
+      rgba(47, 48, 58, 0.6) 100%
+    ),
+    url('./assets/images/online.jpg');
+}
+
+@media only screen and (min-width: 1600px) {
+  .section-wide-img {
+    border-radius: 1.6rem;
+  }
+}
+
+.online-box {
+  position: absolute;
+  top: 8%;
+  right: 2%;
+  width: 160px;
+}
+
+@media only screen and (min-width: 768px) {
+  .online-box {
+    width: 320px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .online-box {
+    right: 5%;
+    width: 400px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .online-box {
+    top: 12%;
+    right: 6%;
+    width: 540px;
+  }
+}
+
+.online-heading {
+  margin-bottom: 10px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: calc(2 / 1.5);
+  letter-spacing: 0.08em;
+  color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+  .online-heading {
+    margin-bottom: 20px;
+    font-size: 1.875rem;
+    line-height: calc(2.25 / 1.875);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .online-heading {
+    margin-bottom: 30px;
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+.online-text {
+  font-family: var(--font-text);
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: calc(1 / 0.75);
+  color: #fff;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+
+@media only screen and (min-width: 768px) {
+  .online-text {
+    font-size: 1.25rem;
+    line-height: calc(1.75 / 1.25);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .online-text {
+    font-size: 1.5rem;
+    line-height: calc(2 / 1.5);
+  }
+}
+
 /* QUESTIONS-SECTION */
 
 .section-questions {
   padding: 12px 24px;
-  margin: 0 auto;
+  margin: 32px auto 0 auto;
   height: 80px;
   width: 100%;
   max-width: 1600px;
@@ -1036,6 +1117,7 @@ header.levitate {
 
 @media only screen and (min-width: 1024px) {
   .section-questions {
+    margin-top: 64px;
     padding: 12px 38px;
   }
 }
