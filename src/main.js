@@ -126,7 +126,7 @@ images.forEach(el => {
 
 const section = document.querySelector('.section-animate');
 const text = document.querySelector('.questions-text');
-const bgColors = ['#e4f5fc', '#313131', '#dcdfe3'];
+const bgColors = ['#e4f5fc', '#313131', '#f3f4f6'];
 const textColors = ['#1d2329', '#e6e6e6', '#454b52'];
 const texts = [
   'Залишились питання? Телефонуйте!',
