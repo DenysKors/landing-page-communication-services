@@ -25,11 +25,10 @@ html {
 :root {
   --font-heading: 'Arsenal', sans-serif;
   --font-text: 'Poppins', sans-serif;
-
   --color-body: #ffffff;
   --color-bg-header: #f3f4f6;
   --color-bg-section-wide: #e4f5fc;
-  --color-bg-section: #f3f4f6;
+  --color-bg-item: #f3f4f6;
   --color-heading: #1d2329;
   --color-text: #454b52;
   --color-link-hover-bg: #dbdcdd;
@@ -962,11 +961,6 @@ header.levitate {
 
 /* TARIFFS-SECTION */
 
-/* var(--color-bg-section) */
-.tariffs-section {
-  background-color: var(--color-bg-section);
-}
-
 .tariffs-heading {
   margin-bottom: 32px;
   font-family: var(--font-heading);
@@ -1013,31 +1007,35 @@ header.levitate {
 }
 
 .tariffs-list-item {
-  width: 250px;
+  padding: 1.5rem;
+  max-width: 350px;
+  border-radius: 1.5rem;
+  background-color: var(--color-bg-item);
 }
 
 @media only screen and (min-width: 768px) {
   .tariffs-list-item {
-    width: 300px;
+    max-width: 450px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .tariffs-list-item {
-    width: 366px;
+    padding: 2.5rem;
+    max-width: 440px;
   }
 }
 
 @media only screen and (min-width: 1280px) {
   .tariffs-list-item {
-    width: 393px;
+    max-width: 615px;
   }
 }
 
 .tariffs-item-title {
-  margin-top: 10px;
-  font-family: var(--font-text);
-  font-weight: 400;
+  margin-bottom: 10px;
+  font-family: var(--font-heading);
+  font-weight: 700;
   font-size: 1.125rem;
   line-height: calc(1.75 / 1.125);
   letter-spacing: 0.05em;
@@ -1046,7 +1044,7 @@ header.levitate {
 
 @media only screen and (min-width: 768px) {
   .tariffs-item-title {
-    margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 1.25rem;
     line-height: calc(1.75 / 1.25);
   }
@@ -1054,8 +1052,62 @@ header.levitate {
 
 @media only screen and (min-width: 1024px) {
   .tariffs-item-title {
+    margin-bottom: 30px;
     font-size: 1.5rem;
     line-height: calc(2 / 1.5);
+  }
+}
+
+.tariffs-table-text p {
+  padding-left: 5px;
+  margin-bottom: 10px;
+  font-family: var(--font-text);
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: calc(1 / 0.75);
+  color: #000;
+  letter-spacing: 0.05em;
+}
+
+@media only screen and (min-width: 768px) {
+  .tariffs-table-text p {
+    padding-left: 7px;
+    margin-bottom: 12px;
+    font-size: 1.125rem;
+    line-height: calc(1.75 / 1.125);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .tariffs-table-text p {
+    padding-left: 9px;
+    margin-bottom: 14px;
+    font-size: 1.25rem;
+    line-height: calc(1.75 / 1.25);
+  }
+}
+
+.tariffs-table-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.tariffs-table-icon {
+  width: 18px;
+  height: 18px;
+}
+
+@media only screen and (min-width: 768px) {
+  .tariffs-table-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .tariffs-table-icon {
+    width: 26px;
+    height: 26px;
   }
 }
 
