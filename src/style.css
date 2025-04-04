@@ -1117,7 +1117,7 @@ header.levitate {
 .section-wide-img {
   margin: 32px auto 32px auto;
   width: 100%;
-  height: calc(100vw / 2.335);
+  height: calc(100vw / 2.336);
   max-width: 1600px;
   max-height: 685px;
   position: relative;
@@ -1227,7 +1227,7 @@ header.levitate {
   font-weight: 700;
   font-size: 1.5rem;
   line-height: calc(2 / 1.5);
-  color: #1d2329;
+  color: var(--color-heading);
   text-align: left;
 }
 
@@ -1251,8 +1251,6 @@ header.levitate {
   font-weight: 400;
   font-size: 1.1rem;
   line-height: calc(1.5 / 1);
-  color: #454b52;
-  /* letter-spacing: 0.05em; */
   text-align: left;
 }
 
