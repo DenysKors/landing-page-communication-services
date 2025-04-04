@@ -1117,7 +1117,7 @@ header.levitate {
 .section-wide-img {
   margin: 32px auto 32px auto;
   width: 100%;
-  height: calc(100vw / 2.33);
+  height: calc(100vw / 2.335);
   max-width: 1600px;
   max-height: 685px;
   position: relative;
@@ -1217,6 +1217,66 @@ header.levitate {
   .online-text {
     font-size: 1.5rem;
     line-height: calc(2 / 1.5);
+  }
+}
+
+/* DIGITALIZATION-SECTION*/
+
+.digitalization-heading {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: calc(2 / 1.5);
+  color: #1d2329;
+  text-align: left;
+}
+
+@media only screen and (min-width: 768px) {
+  .digitalization-heading {
+    font-size: 1.875rem;
+    line-height: calc(2.25 / 1.875);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .digitalization-heading {
+    margin-bottom: 32px;
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+.digitalization-text {
+  font-family: var(--font-text);
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: calc(1.5 / 1);
+  color: #454b52;
+  /* letter-spacing: 0.05em; */
+  text-align: left;
+}
+
+@media only screen and (min-width: 768px) {
+  .digitalization-text {
+    font-size: 1.125rem;
+    line-height: calc(1.75 / 1.125);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .digitalization-text {
+    font-size: 1.25rem;
+    line-height: calc(1.75 / 1.25);
+  }
+}
+
+.digitalization-text:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .digitalization-text:not(:last-child) {
+    margin-bottom: 32px;
   }
 }
 
