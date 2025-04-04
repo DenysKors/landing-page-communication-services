@@ -1038,6 +1038,7 @@ header.levitate {
   font-weight: 700;
   font-size: 1.125rem;
   line-height: calc(1.75 / 1.125);
+  color: #1d2329;
   letter-spacing: 0.05em;
   text-align: center;
 }
@@ -1063,8 +1064,8 @@ header.levitate {
   margin-bottom: 10px;
   font-family: var(--font-text);
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: calc(1 / 0.75);
+  font-size: 1rem;
+  line-height: calc(1.5 / 1);
   color: #000;
   letter-spacing: 0.05em;
 }
@@ -1093,8 +1094,8 @@ header.levitate {
 }
 
 .tariffs-table-icon {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
 }
 
 @media only screen and (min-width: 768px) {
