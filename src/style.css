@@ -1117,7 +1117,7 @@ header.levitate {
 .section-wide-img {
   margin: 32px auto 32px auto;
   width: 100%;
-  height: calc(100vw / 2.336);
+  height: calc(100vw / 2.34);
   max-width: 1600px;
   max-height: 685px;
   position: relative;
@@ -1228,7 +1228,9 @@ header.levitate {
   font-size: 1.5rem;
   line-height: calc(2 / 1.5);
   color: var(--color-heading);
+  text-transform: uppercase;
   text-align: left;
+  text-shadow: -5px 4px var(--color-link-hover-bg);
 }
 
 @media only screen and (min-width: 768px) {
