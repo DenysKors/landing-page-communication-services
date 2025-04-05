@@ -96,14 +96,14 @@ img {
 }
 
 .section {
-  padding: 32px 24px;
+  padding: 42px 24px;
   margin: 0 auto;
   max-width: 1280px;
 }
 
 @media only screen and (min-width: 768px) {
   .section {
-    padding: 32px 30px;
+    padding: 58px 30px;
   }
 }
 
@@ -121,7 +121,7 @@ img {
 }
 
 .section-wide {
-  padding: 32px 24px;
+  padding: 42px 24px;
   margin: 0 auto;
   width: 100%;
   max-width: 1600px;
@@ -130,7 +130,7 @@ img {
 
 @media only screen and (min-width: 768px) {
   .section-wide {
-    padding: 32px 30px;
+    padding: 58px 30px;
   }
 }
 
@@ -166,7 +166,7 @@ img {
 .header {
   width: 100vw;
   max-width: 1280px;
-  padding: 0.5rem;
+  padding: 0.25rem 0.5rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -180,7 +180,7 @@ img {
 
 @media only screen and (min-width: 768px) {
   .header {
-    padding: 0.875rem;
+    padding: 0.5rem 0.875rem;
   }
 }
 
@@ -192,15 +192,8 @@ img {
 }
 
 header.levitate {
-  padding: 0rem 0.5rem;
   background-color: var(--color-bg-header);
   box-shadow: var(--shadow-header);
-}
-
-@media only screen and (min-width: 768px) {
-  header.levitate {
-    padding: 0rem 0.875rem;
-  }
 }
 
 .header-logo {
@@ -233,7 +226,7 @@ header.levitate {
   .header-nav {
     width: 100vw;
     position: absolute;
-    top: 3.9rem;
+    top: 3.4rem;
     left: 0;
     z-index: 20;
   }
@@ -263,7 +256,7 @@ header.levitate {
 
 @media only screen and (max-width: 767px) {
   .header-nav {
-    top: 2.8rem;
+    top: 2.7rem;
   }
 }
 
@@ -439,13 +432,20 @@ header.levitate {
 }
 
 /* MAIN */
+
 .main {
-  padding-top: 3.5rem;
+  padding-top: 3rem;
 }
 
 @media only screen and (min-width: 768px) {
   .main {
-    padding-top: 4.75rem;
+    padding-top: 3.75rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .main {
+    padding-top: 4rem;
   }
 }
 

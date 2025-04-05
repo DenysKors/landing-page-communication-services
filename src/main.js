@@ -15,6 +15,20 @@ const mobMenuBackdrop = document.getElementById('mobile-backdrop');
 const svgMenuIconRef = document.getElementById('icon-menu');
 const svgCloseIconRef = document.getElementById('icon-close');
 
+document.addEventListener('DOMContentLoaded', () => {
+  const userColorSchemeDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+  if (
+    userColorSchemeDark.matches &&
+    !document.body.classList.contains('dark-theme')
+  ) {
+    document.body.classList.toggle('dark-theme');
+    svgMoonIconRef.classList.add('sun-theme');
+    svgSunIconRef.classList.add('moon-theme');
+    themeBtnRef.classList.add('back-moon');
+  }
+});
+
 const toggleTheme = () => {
   document.body.classList.toggle('dark-theme');
 
