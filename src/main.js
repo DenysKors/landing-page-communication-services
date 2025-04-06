@@ -57,9 +57,11 @@ const mobMenuControl = () => {
   if (mobMenuRef.dataset.modalOpen === 'true') {
     mobMenuRef.dataset.modalOpen = 'false';
     mobMenuBackdrop.classList.add('hide');
+    document.body.style.overflow = 'scroll';
   } else {
     mobMenuRef.dataset.modalOpen = 'true';
     mobMenuBackdrop.classList.remove('hide');
+    document.body.style.overflow = 'hidden';
   }
   toggleMenuIcon();
 };
@@ -72,6 +74,7 @@ const mobNavControl = evt => {
   }
   mobMenuRef.dataset.modalOpen = 'false';
   mobMenuBackdrop.classList.add('hide');
+  document.body.style.overflow = 'scroll';
   toggleMenuIcon();
 };
 
@@ -91,7 +94,7 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
 
 ScrollTrigger.create({
-  start: 'top -80',
+  start: 'top -50',
   end: 99999,
   toggleClass: {
     className: 'levitate',
