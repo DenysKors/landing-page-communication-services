@@ -1010,7 +1010,14 @@ header.levitate {
   padding: 1.5rem;
   max-width: 350px;
   border-radius: 1.5rem;
-  background-color: var(--color-bg-item);
+  background: linear-gradient(
+      135deg,
+      var(--color-bg-item) 45%,
+      var(--color-bg-section-wide),
+      var(--color-bg-item) 55%
+    )
+    right / 450% 100%;
+  animation: ribbon 5s ease-in-out infinite;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1029,6 +1036,18 @@ header.levitate {
 @media only screen and (min-width: 1280px) {
   .tariffs-list-item {
     max-width: 615px;
+  }
+}
+
+@keyframes ribbon {
+  0% {
+    background-position: right;
+  }
+  35% {
+    background-position: left;
+  }
+  100% {
+    background-position: left;
   }
 }
 
