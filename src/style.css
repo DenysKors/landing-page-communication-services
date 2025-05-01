@@ -1377,3 +1377,7 @@ header.levitate {
     padding: 64px 38px;
   }
 }
+
+.active {
+  text-decoration: underline;
+}

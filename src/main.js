@@ -14,6 +14,13 @@ const mobMenuRef = document.querySelector('[data-modal-open]');
 const mobMenuBackdrop = document.getElementById('mobile-backdrop');
 const svgMenuIconRef = document.getElementById('icon-menu');
 const svgCloseIconRef = document.getElementById('icon-close');
+const sectionsRef = document.querySelectorAll('section');
+
+const sectionIDRef = [];
+
+sectionsRef.forEach(section => {
+  if (section.hasAttribute('id')) sectionIDRef.push(`#${section.id}`);
+});
 
 document.addEventListener('DOMContentLoaded', () => {
   const userColorSchemeDark = window.matchMedia('(prefers-color-scheme: dark)');
@@ -100,6 +107,22 @@ ScrollTrigger.create({
     className: 'levitate',
     targets: '.header',
   },
+});
+
+sectionIDRef.forEach(section => {
+  let navLink = document.querySelector(`header nav a[href='${section}']`);
+  ScrollTrigger.create({
+    trigger: section,
+    start: 'top 40%',
+    end: 'bottom 40%',
+    onToggle: self => {
+      if (self.isActive) {
+        navLink.classList.add('active');
+      } else {
+        navLink.classList.remove('active');
+      }
+    },
+  });
 });
 
 const reveal = document.querySelectorAll('h2');
