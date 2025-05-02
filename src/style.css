@@ -314,6 +314,10 @@ header.levitate {
   opacity: 1;
 }
 
+.nav-link-active {
+  text-decoration: underline;
+}
+
 .header-btn-container {
   display: flex;
   gap: 1rem;
@@ -1241,61 +1245,55 @@ header.levitate {
 
 /* DIGITALIZATION-SECTION*/
 
-.digitalization-heading {
+.digit-section-text {
+  position: relative;
+  min-height: 150svh;
+}
+
+.digit-text-box {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  min-height: 75svh;
+  align-items: center;
+  justify-content: center;
+}
+
+.digit-section-mask {
+  height: 16.666%;
+  position: absolute;
+  width: 100%;
+  top: 10%;
+  left: 0;
+}
+
+.digit-heading {
+  max-width: 50rem;
+  padding-block: 1.25rem;
+  padding-inline: 0.9375rem;
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 1.5rem;
   line-height: calc(2 / 1.5);
   color: var(--color-heading);
   text-transform: uppercase;
-  text-align: left;
-  text-shadow: -5px 4px var(--color-link-hover-bg);
+  text-align: end;
+  letter-spacing: 0.02em;
 }
 
 @media only screen and (min-width: 768px) {
-  .digitalization-heading {
+  .digit-heading {
     font-size: 1.875rem;
     line-height: calc(2.25 / 1.875);
+    letter-spacing: 0.03em;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .digitalization-heading {
-    margin-bottom: 32px;
+  .digit-heading {
     font-size: 3rem;
     line-height: 1;
-  }
-}
-
-.digitalization-text {
-  font-family: var(--font-text);
-  font-weight: 400;
-  font-size: 1.1rem;
-  line-height: calc(1.5 / 1);
-  text-align: left;
-}
-
-@media only screen and (min-width: 768px) {
-  .digitalization-text {
-    font-size: 1.125rem;
-    line-height: calc(1.75 / 1.125);
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .digitalization-text {
-    font-size: 1.25rem;
-    line-height: calc(1.75 / 1.25);
-  }
-}
-
-.digitalization-text:not(:last-child) {
-  margin-bottom: 16px;
-}
-
-@media only screen and (min-width: 1024px) {
-  .digitalization-text:not(:last-child) {
-    margin-bottom: 32px;
   }
 }
 
@@ -1362,6 +1360,7 @@ header.levitate {
   padding: 32px 24px;
   margin: 0 auto;
   width: 100%;
+  height: 50vh;
   max-width: 1600px;
   background-color: #dcdfe3;
 }
@@ -1378,6 +1377,35 @@ header.levitate {
   }
 }
 
-.active {
-  text-decoration: underline;
+/* .digit-section {
+  height: 100svh;
+  background-color: rgba(255, 255, 255, 0.1);
 }
+.digit-section-text {
+  position: relative;
+  min-height: 200svh;
+}
+.digit-text-box {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  min-height: 100svh;
+  align-items: center;
+}
+.digit-section-mask {
+  height: 16.666%;
+  position: absolute;
+  width: 100%;
+  top: 33.333%;
+  left: 0;
+}
+.digit-value {
+  font-size: 2.375rem;
+  font-weight: 900;
+  line-height: 1.3;
+  max-width: 50rem;
+  padding-block: 1.25rem;
+  padding-inline: 0.9375rem;
+  margin: 0 auto;
+} */
