@@ -1245,7 +1245,7 @@ header.levitate {
 
 /* DIGITALIZATION-SECTION*/
 
-.digit-section-text {
+/* .digit-section-text {
   position: relative;
   min-height: 150svh;
 }
@@ -1266,11 +1266,18 @@ header.levitate {
   width: 100%;
   top: 10%;
   left: 0;
+} */
+
+.container {
+  width: 100%;
+  max-width: 50rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .digit-heading {
-  max-width: 50rem;
-  padding-block: 1.25rem;
   padding-inline: 0.9375rem;
   font-family: var(--font-heading);
   font-weight: 700;
@@ -1336,7 +1343,6 @@ header.levitate {
   font-size: 1.125rem;
   font-weight: 400;
   line-height: calc(1.75 / 1.125);
-  letter-spacing: 0.05em;
   text-align: center;
 }
 

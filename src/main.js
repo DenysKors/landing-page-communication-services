@@ -97,8 +97,7 @@ mobMenuRef.addEventListener('click', mobNavControl);
 
 /* SECTION ANIMATIONS */
 
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(SplitText);
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 ScrollTrigger.create({
   start: 'top -50',
@@ -185,43 +184,68 @@ splitTl
 
 /* TEXT OPASITY ON SCROLL*/
 
-const textOpacityOnScroll = () => {
-  if (textSectionRef.length) {
-    textSectionRef.forEach(elem => {
-      const elemValue = elem.querySelector('.digit-heading');
-      const elemMask = elem.querySelector('.digit-section-mask');
-      const elemSpeed = +elemValue.dataset.textSpeed || 500;
-      const elemOpacity = +elemValue.dataset.textOpacity || 0.2;
-      elemValue.innerHTML = elemValue.innerText.replace(
-        /([А-Яа-яёЁЇїІіЄєҐґ0-9'-,.&!?+<>/]+)/g,
-        `<span style="transition: opacity ${elemSpeed}ms; opacity: ${elemOpacity}">$1</span>`
-      );
+// const textOpacityOnScroll = () => {
+//   if (textSectionRef.length) {
+//     textSectionRef.forEach(elem => {
+//       const elemValue = elem.querySelector('.digit-heading');
+//       const elemMask = elem.querySelector('.digit-section-mask');
+//       const elemSpeed = +elemValue.dataset.textSpeed || 500;
+//       const elemOpacity = +elemValue.dataset.textOpacity || 0.2;
+//       elemValue.innerHTML = elemValue.innerText.replace(
+//         /([А-Яа-яёЁЇїІіЄєҐґ0-9'-,.&!?+<>/]+)/g,
+//         `<span style="transition: opacity ${elemSpeed}ms; opacity: ${elemOpacity}">$1</span>`
+//       );
 
-      window.addEventListener('scroll', function () {
-        const maskPosition =
-          elemMask.getBoundingClientRect().top - window.innerHeight;
-        const elemWay =
-          (Math.abs(maskPosition) /
-            (window.innerHeight = elemMask.offsetHeight)) *
-          50;
-        const elemWords = elemValue.querySelectorAll('span');
-        const currentWord =
-          maskPosition <= 0
-            ? Math.floor((elemWords.length / 100) * elemWay)
-            : -1;
-        addOpacity(elemWords, currentWord);
-      });
+//       window.addEventListener('scroll', function () {
+//         const maskPosition =
+//           elemMask.getBoundingClientRect().top - window.innerHeight;
+//         const elemWay =
+//           (Math.abs(maskPosition) /
+//             (window.innerHeight = elemMask.offsetHeight)) *
+//           50;
+//         const elemWords = elemValue.querySelectorAll('span');
+//         const currentWord =
+//           maskPosition <= 0
+//             ? Math.floor((elemWords.length / 100) * elemWay)
+//             : -1;
+//         addOpacity(elemWords, currentWord);
+//       });
 
-      function addOpacity(elemWords, currentWord) {
-        elemWords.forEach((elemWord, idx) => {
-          elemWord.style.opacity = elemOpacity;
-          if (idx <= currentWord) {
-            elemWord.style.opacity = 1;
-          }
-        });
-      }
-    });
-  }
-};
+//       function addOpacity(elemWords, currentWord) {
+//         elemWords.forEach((elemWord, idx) => {
+//           elemWord.style.opacity = elemOpacity;
+//           if (idx <= currentWord) {
+//             elemWord.style.opacity = 1;
+//           }
+//         });
+//       }
+//     });
+//   }
+// };
 
-textOpacityOnScroll();
+// textOpacityOnScroll();
+
+const splitT = SplitText.create('.wrapper p', {
+  type: 'words',
+});
+
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: '#textSection',
+      // start: 'top top',
+      start: '-10%',
+      end: '+=100%',
+      pin: true,
+      scrub: 0.75,
+      markers: true,
+    },
+  })
+  .from(splitT.words, {
+    opacity: 0.2,
+    stagger: 0.1,
+  })
+  .to(splitT.words, {
+    opacity: 1,
+    stagger: 0.1,
+  });
