@@ -2,8 +2,7 @@ import './style.css';
 
 import { gsap } from 'gsap';
 
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { TextPlugin } from 'gsap/TextPlugin';
+import { ScrollTrigger, SplitText } from 'gsap/all';
 
 // const headerRef = document.querySelector('.header');
 const themeBtnRef = document.getElementById('theme-switch');
@@ -99,7 +98,7 @@ mobMenuRef.addEventListener('click', mobNavControl);
 /* SECTION ANIMATIONS */
 
 gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(TextPlugin);
+gsap.registerPlugin(SplitText);
 
 ScrollTrigger.create({
   start: 'top -50',
@@ -165,52 +164,24 @@ images.forEach(el => {
   });
 });
 
-const section = document.querySelector('.section-animate');
-const text = document.querySelector('.questions-text');
-const bgColors = ['#e4f5fc', '#313131', '#f3f4f6'];
-const textColors = ['#1d2329', '#e6e6e6', '#454b52'];
-const texts = [
-  'Залишились питання? Телефонуйте!',
-  'Просте та швидке підключення',
-  'Наші спеціалісти завжди на зв&#39;язку',
-];
+/* SPLIT TEXT */
 
-const tl = gsap.timeline({
-  repeat: -1,
-});
+let split = SplitText.create('.split', { type: 'words, chars' });
 
-for (let i = 0; i < texts.length; i += 1) {
-  tl.to(section, { duration: 0.5, backgroundColor: bgColors[i] });
-  if (i) {
-    tl.fromTo(
-      text,
-      { text: texts[i - 1], opacity: 0, color: textColors[i - 1] },
-      { text: '', opacity: 1, ease: 'none' },
-      '<'
-    ).to(text, {
-      text: texts[i],
-      duration: 7,
-      opacity: 1,
-      color: textColors[i],
-    });
-  } else {
-    tl.fromTo(
-      text,
-      {
-        text: texts[texts.length - 1],
-        opacity: 0,
-        color: textColors[textColors.length - 1],
-      },
-      { text: '', opacity: 1 },
-      '<'
-    ).to(text, {
-      text: texts[i],
-      duration: 7,
-      opacity: 1,
-      color: textColors[i],
-    });
-  }
-}
+const splitTl = gsap.timeline({ repeat: -1 });
+
+splitTl
+  .from(split.chars, {
+    duration: 0.5,
+    opacity: 0,
+    stagger: 0.125,
+    ease: 'power1. In',
+  })
+  .to(
+    split.chars,
+    { duration: 0.25, opacity: 0, stagger: 0.125, ease: 'power3. inOut' },
+    '+=3'
+  );
 
 /* TEXT OPASITY ON SCROLL*/
 
