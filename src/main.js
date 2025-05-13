@@ -84,6 +84,15 @@ const mobNavControl = evt => {
   toggleMenuIcon();
 };
 
+window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
+  console.log(e);
+  if (!e.matches) return;
+  mobMenuRef.dataset.modalOpen = 'false';
+  mobMenuBackdrop.classList.add('hide');
+  document.body.style.overflow = 'scroll';
+  toggleMenuIcon();
+});
+
 themeBtnRef.addEventListener('click', toggleTheme);
 mobMenuBtnRef.addEventListener('click', mobMenuControl);
 mobMenuRef.addEventListener('click', mobNavControl);
