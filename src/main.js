@@ -59,15 +59,23 @@ const toggleMenuIcon = () => {
   }
 };
 
+const mobMenuClose = () => {
+  mobMenuRef.dataset.modalOpen = 'false';
+  mobMenuBackdrop.classList.add('hide');
+  document.body.style.overflow = 'scroll';
+};
+
+const mobMenuOpen = () => {
+  mobMenuRef.dataset.modalOpen = 'true';
+  mobMenuBackdrop.classList.remove('hide');
+  document.body.style.overflow = 'hidden';
+};
+
 const mobMenuControl = () => {
   if (mobMenuRef.dataset.modalOpen === 'true') {
-    mobMenuRef.dataset.modalOpen = 'false';
-    mobMenuBackdrop.classList.add('hide');
-    document.body.style.overflow = 'scroll';
+    mobMenuClose();
   } else {
-    mobMenuRef.dataset.modalOpen = 'true';
-    mobMenuBackdrop.classList.remove('hide');
-    document.body.style.overflow = 'hidden';
+    mobMenuOpen();
   }
   toggleMenuIcon();
 };
@@ -78,18 +86,13 @@ const mobNavControl = evt => {
   } else if (evt.target === evt.currentTarget) {
     return;
   }
-  mobMenuRef.dataset.modalOpen = 'false';
-  mobMenuBackdrop.classList.add('hide');
-  document.body.style.overflow = 'scroll';
+  mobMenuClose();
   toggleMenuIcon();
 };
 
 window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
-  console.log(e);
   if (!e.matches) return;
-  mobMenuRef.dataset.modalOpen = 'false';
-  mobMenuBackdrop.classList.add('hide');
-  document.body.style.overflow = 'scroll';
+  mobMenuClose();
   toggleMenuIcon();
 });
 
