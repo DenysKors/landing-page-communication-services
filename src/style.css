@@ -200,14 +200,13 @@ header.levitate {
 .header-logo {
   display: flex;
   gap: 0.5rem;
-  place-items: center;
+  align-items: center;
 }
 
 .logo-link {
   font-family: var(--font-text);
   font-weight: 400;
   font-size: 1rem;
-  line-height: calc(1.5 / 1);
   letter-spacing: 0.05em;
 }
 
@@ -219,7 +218,6 @@ header.levitate {
 @media only screen and (min-width: 768px) {
   .logo-link {
     font-size: 1.125rem;
-    line-height: calc(1.75 / 1.125);
   }
 }
 
@@ -266,7 +264,6 @@ header.levitate {
 
 @media only screen and (min-width: 1024px) {
   .header-nav {
-    width: 100%;
     display: flex;
     gap: 1rem;
     justify-content: center;
