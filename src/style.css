@@ -1361,3 +1361,7 @@ header.levitate {
     padding: 64px 38px;
   }
 }
+
+.copy {
+  text-align: center;
+}
