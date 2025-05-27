@@ -159,7 +159,7 @@ reveal.forEach(el => {
   });
 });
 
-const images = document.querySelectorAll('img');
+const images = document.querySelectorAll('section img');
 
 images.forEach(el => {
   let tl = gsap.timeline().from(el, {

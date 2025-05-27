@@ -203,6 +203,25 @@ header.levitate {
   align-items: center;
 }
 
+.logo {
+  width: 70px;
+  height: 22px;
+}
+
+@media only screen and (min-width: 768px) {
+  .logo {
+    width: 142px;
+    height: 44px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .logo {
+    width: 149px;
+    height: 46px;
+  }
+}
+
 .logo-link {
   font-family: var(--font-text);
   font-weight: 400;
