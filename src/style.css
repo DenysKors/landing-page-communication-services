@@ -27,6 +27,7 @@ html {
   --font-text: 'Poppins', sans-serif;
   --color-body: #ffffff;
   --color-bg-header: #f3f4f6;
+  --color-bg-logo: transparent;
   --color-bg-section-wide: #e4f5fc;
   --color-bg-item: #f3f4f6;
   --color-heading: #1d2329;
@@ -41,6 +42,7 @@ html {
 .dark-theme {
   --color-body: #0a0f20;
   --color-bg-header: #313131;
+  --color-bg-logo: #ffffff;
   --color-heading: #ffffff;
   --color-text: #e6e6e6;
   --color-link-hover-bg: #616262;
@@ -206,12 +208,15 @@ header.levitate {
 .logo {
   width: 70px;
   height: 22px;
+  background-color: var(--color-bg-logo);
+  border-radius: 2px;
 }
 
 @media only screen and (min-width: 768px) {
   .logo {
     width: 142px;
     height: 44px;
+    border-radius: 4px;
   }
 }
 
@@ -219,6 +224,7 @@ header.levitate {
   .logo {
     width: 149px;
     height: 46px;
+    border-radius: 8px;
   }
 }
 
