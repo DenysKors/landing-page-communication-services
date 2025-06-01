@@ -484,7 +484,7 @@ header.levitate {
 .hero {
   margin: 0 auto;
   width: 100%;
-  height: calc(100vw / 1.89);
+  height: calc(100vw / 1.8823);
   max-width: 1600px;
   max-height: 850px;
   position: relative;
@@ -1184,7 +1184,7 @@ header.levitate {
 .section-wide-img {
   margin: 32px auto 32px auto;
   width: 100%;
-  height: calc(100vw / 2.34);
+  height: calc(100vw / 2.3357);
   max-width: 1600px;
   max-height: 685px;
   position: relative;
